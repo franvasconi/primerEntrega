@@ -49,11 +49,11 @@ function calcularPrecioConCuotas(producto) {
     let precioTotal = precioBase * cuotas;
 
     if (cuotas >= 3 && cuotas <= 6) {
-        let iva = precioTotal * 0.19; // IVA (19%)
+        let iva = precioTotal * 0.21; // IVA (19%)
         precioTotal += iva;
         return "Usted ha elegido " + producto + ". El precio total con " + cuotas + " cuotas sin interes y el IVA incluido es: $" + precioTotal.toFixed(2);
     } else {
-        alert("Cantidad de cuotas no válida. Por favor, elija entre 3 y 6 cuotas.");
+        alert("Cantidad de cuotas no valida. Por favor, elija entre 3 y 6 cuotas.");
         return calcularPrecioConCuotas(producto); // Pedir de nuevo la cantidad de cuotas
     }
 }
